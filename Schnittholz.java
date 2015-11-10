@@ -96,4 +96,16 @@ public class Schnittholz implements Etikett{
             }
         }
     }
+
+    public void fasern(Etikett[] e){   // bekommt array
+        for(Etikett i: e){
+            if(i instanceof Schnittholz){
+                ((Schnittholz) i).alt = this;
+            }else if(i instanceof Energieholz){
+                ((Energieholz) i).alt = this;
+            }else{
+                throw new IllegalArgumentException("Invalid Type");
+            }
+        }
+    }
 }
