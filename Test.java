@@ -3,7 +3,7 @@ Erste Überlegungen zur Herangehensweise sowie Diskussion über das Verständnis
 
 Armin Puffler (1225268): Weitere Planung, Sägerundholz, Industrieholz, Vollkantschnittholz, Hackschnitzel
 Jovan Zivanovic (1426514):
-Stefan Buttenhauser (0926720): 
+Stefan Buttenhauser (0926720): Energieholz, Schnittholz, Rundholz
 
 */
 
