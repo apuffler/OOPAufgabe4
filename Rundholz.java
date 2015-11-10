@@ -1,10 +1,10 @@
 
 public class Rundholz implements Etikett{
 
-    private int laenge;
-    private String datum;
-    private Etikett alt;
-    private double staerke;
+    protected int laenge;
+    protected String datum;
+    protected Etikett alt;
+    protected double staerke;
 
     /**
      * Konstruktor der Rundholz Klasse
@@ -36,8 +36,39 @@ public class Rundholz implements Etikett{
         return this.alt;
     }
 
-    neu(){
+    public double staerke(){
+        return this.staerke;
+    }
 
+    /**
+     * neu Methode
+     *
+     * @param (e) Etikett welches dieses Element als Vorgänger zugewiesen bekommen soll
+     *
+     * @return liefert das neue Etikett mit dem gesetzten Wert für alt zurück
+     **/
+    public Etikett neu(Etikett e){
+        if(e instanceof BauRundholz){
+            ((BauRundholz) e).alt = this;
+            return e;
+        }
+        if(e instanceof Energieholz){
+            ((Energieholz) e).alt = this;
+            return e;
+        }
+        if(e instanceof Saegerundholz){
+            ((Saegerundholz) e).alt = this;
+            return e;
+        }
+        if(e instanceof Industrieholz){
+            ((Industrieholz) e).alt = this;
+            return e;
+        }
+        if(e instanceof Rundholz){
+            ((Rundholz) e).alt = this;
+            return e;
+        }
+        throw new IllegalArgumentException("Invalid Type");
     }
 
 }
