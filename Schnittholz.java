@@ -1,11 +1,11 @@
 
 public class Schnittholz implements Etikett{
 
-    private int laenge;
-    private String datum;
-    private Etikett alt;
-    private double dicke;
-    private double breite;
+    protected int laenge;
+    protected String datum;
+    protected Etikett alt;
+    protected double dicke;
+    protected double breite;
 
     /**
      * Konstruktor der Rundholz Klasse
@@ -39,11 +39,62 @@ public class Schnittholz implements Etikett{
         return this.alt;
     }
 
-    neu(){
+    public double breite(){
+        return this.breite;
+    }
+
+    public double dicke(){
+        return this.dicke;
+    }
+
+    /**
+     * neu Methode
+     *
+     * @param (e) Etikett welches dieses Element als Vorgänger zugewiesen bekommen soll
+     *
+     * @return liefert das neue Etikett mit dem gesetzten Wert für alt zurück
+     **/
+    public Etikett neu(Etikett e){
+
+        if(e instanceof BauRundholz){
+            ((BauRundholz) e).alt = this;
+            return e;
+        }
+        if(e instanceof Kantholz){
+            ((Kantholz) e).alt = this;
+            return e;
+        }
+
+        if(e instanceof Brett){
+            ((Brett) e).alt = this;
+            return e;
+        }
+        if(e instanceof VollkantSchnittholz){
+            ((VollkantSchnittholz) e).alt = this;
+            return e;
+        }
+        if(e instanceof Schnittholz){
+            ((Schnittholz) e).alt = this;
+            return e;
+        }
+        if(e instanceof Energieholz){
+            ((Energieholz) e).alt = this;
+            return e;
+        }
+        throw new IllegalArgumentException("Invalid Type");
         // Schnittholz, Bauholz, Energieholz
     }
 
-    saegen(){   // bekommt array
-        // Schnittholz, Energieholz
+    public void saegen(Etikett[] e){   // bekommt array
+        for(Etikett i: e){
+            if(i instanceof Schnittholz){
+                ((Schnittholz) i).alt = this;
+            }else if(i instanceof Energieholz){
+                ((Energieholz) i).alt = this;
+            }else{
+                throw new IllegalArgumentException("Invalid Type");
+            }
+
+        }
     }
 }
