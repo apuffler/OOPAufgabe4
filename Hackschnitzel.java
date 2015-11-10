@@ -23,4 +23,7 @@ public class Hackschnitzel
 		this.volumen = this.volumen + volumen;
 	} 
 
+	public double volumen(){
+		return volumen; 
+	}
 }
