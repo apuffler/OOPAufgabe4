@@ -16,6 +16,21 @@ public class Industrieholz extends Rundholz
 	{
 		super(laenge, datum, alt, staerke);
 	}
-
+	/** Zerfasert dieses Industrieholz und fügt die Überbleibsel dem Singleton hinzu
+	*
+	* @param (haecksel): Überbleibsel-Singleton
+	*/
+	public void fasen(Hackschnitzel haecksel)
+	{
+		 haecksel.hinzufuegen(Math.PI * Math.pow((this.staerke/2),2) * laenge);
+	}
+	/** Zerfasert dieses Industrieholz und fügt die Überbleibsel dem Singleton hinzu
+	*
+	* @param (haecksel): Überbleibsel-Singleton
+	*/
+	public void mahlen(Hackschnitzel haecksel)
+	{
+		 haecksel.hinzufuegen(Math.PI * Math.pow((this.staerke/2),2) * laenge)
+	}
 
 }
