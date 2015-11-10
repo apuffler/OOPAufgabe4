@@ -61,7 +61,7 @@ public class Saegerundholz extends Rundholz
 		for (Energieholz e : energieholz)
 		{
 			e.laenge = this.laenge;
-			e.volumen = Math.toIntExact(Math.round((rundholzVolume - schnittholzVolume) / energieholz.length));
+			e.volumen = (int)(Math.round((rundholzVolume - schnittholzVolume) / this.laenge));
 
 		}
 
