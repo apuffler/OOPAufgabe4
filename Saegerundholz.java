@@ -20,17 +20,17 @@ public class Saegerundholz extends Rundholz
 		super(laenge, datum, alt, staerke);
 	}
 
-	public saegen(  String datum, double schnittholzDicke)
+	public void saegen(String datum, double schnittholzDicke)
 	{
 		//Etikett alt
 		//int laenge
 		
-		SchnittHolz mitte = new SchnittHolz();
+		//Schnittholz mitte = new Schnittholz();
 
 
 	}
 
-	public schaelen()
+	public void schaelen()
 	{
 
 	}
