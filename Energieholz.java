@@ -1,10 +1,10 @@
 
 public class Energieholz implements Etikett{
 
-    private int laenge;
-    private String datum;
-    private Etikett alt;
-    private int volumen;
+    protected int laenge;
+    protected String datum;
+    protected Etikett alt;
+    protected int volumen;
 
     /**
      * Konstruktor der Rundholz Klasse
@@ -36,11 +36,47 @@ public class Energieholz implements Etikett{
         return this.alt;
     }
 
-    neu(){
-        // Rundholz, Energieholz
+    public int volumen(){
+        return this.volumen;
     }
 
-    hacken(){
-        // ????????
+    /**
+     * neu Methode
+     *
+     * @param (e) Etikett welches dieses Element als Vorgänger zugewiesen bekommen soll
+     *
+     * @return liefert das neue Etikett mit dem gesetzten Wert für alt zurück
+     **/
+    public Etikett neu(Etikett e){
+        if(e instanceof BauRundholz){
+            ((BauRundholz) e).alt = this;
+            return e;
+        }
+        if(e instanceof Energieholz){
+            ((Energieholz) e).alt = this;
+            return e;
+        }
+        if(e instanceof Saegerundholz){
+            ((Saegerundholz) e).alt = this;
+            return e;
+        }
+        if(e instanceof Industrieholz){
+            ((Industrieholz) e).alt = this;
+            return e;
+        }
+        if(e instanceof Rundholz){
+            ((Rundholz) e).alt = this;
+            return e;
+        }
+        throw new IllegalArgumentException("Invalid Type");
+    }
+
+    /**
+     * Das Objekt wird in Hackschnitzel zerlegt welche nicht weiter etikettiert werden
+     * -> Werte werden auf 0 gesetzt
+     **/
+    public void hacken(){
+        this.laenge = 0;
+        this.volumen = 0;
     }
 }
