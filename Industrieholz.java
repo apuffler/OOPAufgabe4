@@ -12,9 +12,9 @@ public class Industrieholz extends Rundholz
  	 * @param (staerke): double staerke must be >= 30 and <= 35.
  	 */
 
-	public Industrieholz()
+	public Industrieholz(int laenge, String datum, Etikett alt, double staerke)
 	{
-
+		super(laenge, datum, alt, staerke);
 	}
 
 
