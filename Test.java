@@ -1,3 +1,12 @@
+/*
+Erste Überlegungen zur Herangehensweise sowie Diskussion über das Verständnis der Angabe erfolgten als Teamarbeit, sowie das Klassendiagramm.
+
+Armin Puffler (1225268): Weitere Planung, Sägerundholz, Industrieholz, Vollkantschnittholz, Hackschnitzel
+Jovan Zivanovic (1426514):
+Stefan Buttenhauser (0926720): 
+
+*/
+
 public class Test{
 	public static void main(String[] args){
 		//Test 1 Erzeuge einfaches EnergieholzEtikett
