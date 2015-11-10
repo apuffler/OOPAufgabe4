@@ -2,7 +2,7 @@
 Erste Überlegungen zur Herangehensweise sowie Diskussion über das Verständnis der Angabe erfolgten als Teamarbeit, sowie das Klassendiagramm.
 
 Armin Puffler (1225268): Weitere Planung, Sägerundholz, Industrieholz, Vollkantschnittholz, Hackschnitzel
-Jovan Zivanovic (1426514):
+Jovan Zivanovic (1426514): Test.java, Baurundholz.java, Bauholz.java, Brett.java, Kantholz.java, Fixed small bug in Industrieholz
 Stefan Buttenhauser (0926720): Energieholz, Schnittholz, Rundholz
 
 */
