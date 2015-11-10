@@ -94,7 +94,6 @@ public class Schnittholz implements Etikett{
             }else{
                 throw new IllegalArgumentException("Invalid Type");
             }
-
         }
     }
 }
